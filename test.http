@@ -1,0 +1,36 @@
+GET https://localhost:5001/api/Articles?page=1&size=10&sortkey=Created&ascending=true
+#Accept: application/xml
+
+###
+
+POST https://localhost:5001/api/Articles
+Content-Type: application/json
+Authorization: Bearer 876c76b7-9f1d-437a-a4ff-5c13d268c320
+
+{
+    "title": "ABC",
+    "body": "123Hello, world!"
+}
+
+###
+
+PUT https://localhost:5001/api/Articles
+Content-Type: application/json
+Authorization: Bearer 876c76b7-9f1d-437a-a4ff-5c13d268c320
+
+{
+    "id": "e7a1eb9e-977f-4881-ed7c-08d92217afc4",
+    "title": "ABC first article",
+    "body": "abc"
+}
+
+###
+
+GET https://localhost:5001/api/Articles/e7a1eb9e-977f-4881-ed7c-08d92217afc4
+
+###
+
+DELETE https://localhost:5001/api/Articles/e7a1eb9e-977f-4881-ed7c-08d92217afc4
+Authorization: Bearer 876c76b7-9f1d-437a-a4ff-5c13d268c320
+
+###
